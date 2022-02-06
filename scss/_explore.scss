@@ -1,0 +1,49 @@
+.explore {
+  margin-top: 28rem;
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-left {
+    transform: translateX(-5rem);
+  }
+  &-right {
+    max-width: 50.8rem;
+    padding-right: 5.8rem;
+  }
+  &-heading {
+    margin-bottom: 2rem;
+  }
+  &-desc {
+    margin-bottom: 3.3rem;
+  }
+  @media screen and (max-width: 1439px) {
+    margin-top: 10rem;
+    &-left {
+      transform: translateX(-2rem);
+    }
+  }
+  @media screen and (max-width: 1023px) {
+    &-right {
+      max-width: 35rem;
+      padding-right: 0;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    margin-top: 8rem;
+    &-container {
+      display: block;
+    }
+    &-right {
+      max-width: 100%;
+    }
+    &-heading {
+      text-align: center;
+    }
+    &-more {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

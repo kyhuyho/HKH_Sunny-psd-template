@@ -1,0 +1,119 @@
+.hero {
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-heading {
+    margin-bottom: 7.3rem;
+  }
+  &-title {
+    font-size: 2.2rem;
+    line-height: 2.7rem;
+    color: $black-color;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 2rem;
+    margin-bottom: 4rem;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 3.2rem;
+      height: 2px;
+      background-color: $black-color;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  &-left {
+    max-width: 470px;
+  }
+  &-right {
+    transform: translateX(8.5rem);
+  }
+  &-dropdown {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+    cursor: pointer;
+    margin-bottom: 2rem;
+  }
+}
+.dropdown {
+  color: $text-dropdown-color;
+  position: relative;
+  &-list {
+    margin-top: 2rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s linear;
+    z-index: 10;
+  }
+  &-item {
+    padding: 2rem 3rem;
+    font-size: 1.5rem;
+  }
+  &-select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid $border-color;
+    padding: 2rem 3rem;
+    border-radius: 6px;
+    font-size: 1.5rem;
+  }
+  &:hover .dropdown-list {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@media screen and (max-width: 1439px) {
+  .hero {
+    &-right {
+      transform: translateX(1.5rem);
+    }
+  }
+}
+@media screen and (max-width: 1023px) {
+  .hero {
+    &-left {
+      max-width: 40rem;
+    }
+    &-heading {
+      font-size: 3.5rem;
+      margin-bottom: 3rem;
+    }
+  }
+  .dropdown {
+    &-select {
+      padding: 1rem;
+      font-size: 1.3rem;
+    }
+    &-item {
+      padding: 1rem;
+      font-size: 1.3rem;
+    }
+  }
+}
+@media screen and(max-width: 767px) {
+  .hero {
+    &-container {
+      display: block;
+    }
+    &-left {
+      margin-bottom: 3rem;
+    }
+    &-heading {
+      font-size: 3.5rem;
+    }
+    &-explore {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

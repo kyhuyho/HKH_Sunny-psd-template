@@ -1,0 +1,91 @@
+.testimonial {
+  margin-top: 25rem;
+  &-heading {
+    padding-left: 5rem;
+    margin-bottom: 4rem;
+  }
+  &-container {
+    padding: 0 15.2rem 0 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-left {
+    width: 100%;
+    max-width: 45rem;
+  }
+  &-right {
+    img {
+      border-radius: 1rem;
+    }
+  }
+  &-icon {
+    color: $yellow-color;
+    i {
+      margin-right: 1.6rem;
+    }
+  }
+  &-desc {
+    margin-top: 3rem;
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 150%;
+    color: $blackest-color;
+  }
+  &-name {
+    margin-top: 4rem;
+    color: $blackest-color;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+  &-position {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: $blackest-color;
+  }
+  .slick-initialized .slick-slide {
+    display: flex;
+  }
+  .slick-arrow {
+    background-color: transparent;
+    border: 0;
+    padding: 2rem;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+  .slick-prev {
+    left: 0;
+  }
+  .slick-next {
+    right: 0;
+  }
+  @media screen and (max-width: 1279px) {
+    margin-top: 8rem;
+    &-container {
+      padding-right: 10rem;
+    }
+    &-left {
+      max-width: 35rem;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &-container {
+      padding: 0;
+    }
+    .slick-initialized .slick-slide {
+      display: block;
+    }
+    &-heading {
+      padding-left: 0;
+      text-align: center;
+    }
+    &-left {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+  }
+}
